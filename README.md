@@ -1,4 +1,4 @@
-# Task killer
+# Task Killer – No Task Left Alive
 
 Task killer to aplikacja do zarządzania zadaniami (TODO List) napisana w React + Vite. Umożliwia dodawanie, edycję, usuwanie i oznaczanie zadań jako wykonane, a stan listy jest zarządzany przez Zustand.
 
