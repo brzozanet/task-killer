@@ -1,6 +1,7 @@
 import { TodoItem } from "../TodoItem/TodoItem";
 import useStore from "../../store/store";
 import PropTypes from "prop-types";
+import css from "./TodoList.module.css";
 
 export const TodoList = () => {
   const { todos } = useStore();
@@ -18,7 +19,7 @@ export const TodoList = () => {
 
   return (
     <>
-      <div>{todoListElement}</div>
+      <div className={css.items}>{todoListElement}</div>
     </>
   );
 };

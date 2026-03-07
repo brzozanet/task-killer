@@ -33,9 +33,22 @@ function App() {
         {isFormVisible ? (
           <AddTaskForm todos={todos} />
         ) : (
-          <button onClick={handleIsFormVisibleClick}>Dodaj zadanie</button>
+          <button className={css.button} onClick={handleIsFormVisibleClick}>
+            Dodaj zadanie
+          </button>
         )}
         <TodoList todos={todos} />
+      </div>
+      <div className={css.footer}>
+        Made with ❤️ by{" "}
+        <a
+          className={css.footerLink}
+          href="https://brzoza.net"
+          target="_blank"
+          rel="noreferrer"
+        >
+          brzoza.net
+        </a>
       </div>
     </>
   );

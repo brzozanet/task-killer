@@ -14,3 +14,55 @@
 .subtitle {
   color: #fff;
 }
+
+.button {
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  margin-bottom: 12px;
+  border-radius: 10px;
+  padding: 10px 16px;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  background: linear-gradient(135deg, #2563ebaa 0%, #0ea5e9aa 100%);
+  transition:
+    border-color 180ms ease,
+    filter 180ms ease;
+}
+
+.button:hover {
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+}
+
+.button:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.9);
+  outline-offset: 2px;
+}
+
+.footer {
+  margin: 0 auto;
+  padding-top: 20px;
+  color: white;
+  text-align: center;
+}
+
+.footerLink {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: #fff;
+  transition:
+    color 160ms ease,
+    text-decoration-color 160ms ease;
+}
+
+.footerLink:hover {
+  color: rgba(255, 255, 255, 0.82);
+  text-decoration-color: rgba(255, 255, 255, 0.82);
+}
+
+.footerLink:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.9);
+  outline-offset: 2px;
+}

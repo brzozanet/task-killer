@@ -24,7 +24,7 @@ export const TodoItem = ({ id, task, isDone, isEdited }) => {
       {
         width: "400px",
         borderRadius: "8px",
-      }
+      },
     );
   };
 
@@ -44,30 +44,61 @@ export const TodoItem = ({ id, task, isDone, isEdited }) => {
       {
         width: "400px",
         borderRadius: "8px",
-      }
+      },
     );
   };
 
   return (
     <>
-      <hr />
       {isEdited ? (
-        <>
+        <div className={css.taskContainer}>
           <input
+            className={css.input}
             type="text"
             value={newTask}
             onChange={(event) => setNewTask(event.target.value)}
           />
-          <button onClick={() => editTodo(id, newTask)}>Potwiedź</button>
-          <button onClick={() => toggleTaskEdit(id)}>Anuluj</button>
-        </>
+          <div className={css.actions}>
+            <button
+              className={`${css.button} ${css.buttonDone}`}
+              onClick={() => editTodo(id, newTask)}
+            >
+              Potwiedź
+            </button>
+            <button
+              className={`${css.button} ${css.buttonCancel}`}
+              onClick={() => toggleTaskEdit(id)}
+            >
+              Anuluj
+            </button>
+          </div>
+        </div>
       ) : (
-        <>
+        <div className={css.taskContainer}>
           <p className={isDone ? css.taskDone : css.task}>{task}</p>
-          {!isDone && <button onClick={handleMarkAsDoneClick}>Zrobione</button>}
-          <button onClick={() => toggleTaskEdit(id)}>Edytuj</button>
-          <button onClick={handleTaskDeleteClick}>Usuń</button>
-        </>
+          <div className={css.actions}>
+            {!isDone && (
+              <button
+                className={`${css.button} ${css.buttonDone}`}
+                onClick={handleMarkAsDoneClick}
+              >
+                Zrobione
+              </button>
+            )}
+            <button
+              className={`${css.button} ${css.buttonEdit}`}
+              onClick={() => toggleTaskEdit(id)}
+            >
+              Edytuj
+            </button>
+            <button
+              className={`${css.button} ${css.buttonDelete}`}
+              onClick={handleTaskDeleteClick}
+            >
+              Usuń
+            </button>
+          </div>
+        </div>
       )}
     </>
   );

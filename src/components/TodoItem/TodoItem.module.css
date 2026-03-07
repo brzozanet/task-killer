@@ -1,8 +1,104 @@
+.taskContainer {
+  margin-bottom: 30px;
+}
+
 .task {
   color: #fff;
+  margin: 12px 0;
+  line-height: 1.5rem;
 }
 
 .taskDone {
   color: #fff;
   text-decoration: line-through;
+  margin: 12px 0;
+  opacity: 0.7;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.input {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 9px 12px;
+  color: #fff;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  background: rgba(15, 23, 42, 0.35);
+  transition:
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+.input:hover {
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+.input:focus-visible {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.7);
+  background: rgba(15, 23, 42, 0.5);
+}
+
+.button {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  padding: 8px 14px;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition:
+    border-color 180ms ease,
+    background-position 180ms ease,
+    filter 180ms ease;
+}
+
+.button:hover {
+  border: 1px solid rgba(255, 255, 255, 0.55);
+}
+
+.buttonDone {
+  background: linear-gradient(135deg, #1fa66faa 0%, #34d399aa 100%);
+}
+
+.buttonEdit {
+  background: linear-gradient(135deg, #3262f0aa 0%, #38bdf8aa 100%);
+}
+
+.buttonDelete {
+  background: linear-gradient(135deg, #d94848aa 0%, #f97316aa 100%);
+}
+
+.buttonCancel {
+  background: linear-gradient(135deg, #5b6274aa 0%, #8f99abaa 100%);
+}
+
+.buttonDone:hover {
+  background: linear-gradient(135deg, #1fa66f 0%, #34d399 100%);
+}
+
+.buttonEdit:hover {
+  background: linear-gradient(135deg, #3262f0 0%, #38bdf8 100%);
+}
+
+.buttonDelete:hover {
+  background: linear-gradient(135deg, #d94848 0%, #f97316 100%);
+}
+
+.buttonCancel:hover {
+  background: linear-gradient(135deg, #5b6274 0%, #8f99ab 100%);
+}
+
+.button:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.9);
+  outline-offset: 2px;
 }
