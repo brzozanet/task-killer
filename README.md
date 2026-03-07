@@ -1,5 +1,7 @@
 # Task Killer – No Task Left Alive
 
+![Screenshot App](https://raw.githubusercontent.com/brzozanet/task-killer/refs/heads/main/src/images/gh-cover-task-killer.jpg)
+
 Task killer to aplikacja do zarządzania zadaniami (TODO List) napisana w React + Vite. Umożliwia dodawanie, edycję, usuwanie i oznaczanie zadań jako wykonane, a stan listy jest zarządzany przez Zustand.
 
 ## Demo
@@ -81,5 +83,3 @@ Aplikacja developerska będzie dostępna pod adresem `http://localhost:5173/task
 
 - Aplikacja startuje z przykładową listą zadań zdefiniowaną w `src/store/store.js`.
 - Dane są trzymane w pamięci aplikacji (brak zapisu do localStorage lub backendu), więc po odświeżeniu strony wracają dane początkowe.
-
-![Screenshot App](https://raw.githubusercontent.com/brzozanet/task-killer/refs/heads/main/src/images/gh-cover-task-killer.jpg)
