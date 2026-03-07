@@ -1,104 +1,111 @@
 .taskContainer {
-  margin-bottom: 30px;
+  margin: 0;
+  padding: 16px;
+  border-radius: 16px;
+  background: var(--bg-card-strong);
+  border: 1px solid rgba(74, 105, 158, 0.22);
+  box-shadow: 0 8px 24px rgba(44, 62, 94, 0.12);
 }
 
 .task {
-  color: #fff;
-  margin: 12px 0;
-  line-height: 1.5rem;
+  color: var(--text-primary);
+  margin: 0 0 14px;
+  line-height: 1.45rem;
+  font-weight: 600;
 }
 
 .taskDone {
-  color: #fff;
+  color: var(--text-secondary);
   text-decoration: line-through;
-  margin: 12px 0;
-  opacity: 0.7;
+  margin: 0 0 14px;
+  opacity: 0.85;
 }
 
 .actions {
   display: flex;
-  gap: 10px;
+  gap: 8px;
   flex-wrap: wrap;
-  margin-bottom: 12px;
+  margin: 0;
 }
 
 .input {
   width: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 10px;
-  padding: 9px 12px;
-  color: #fff;
+  border: 1px solid rgba(76, 106, 146, 0.32);
+  border-radius: 12px;
+  padding: 11px 13px;
+  color: var(--text-primary);
   font-size: 0.95rem;
-  margin-bottom: 10px;
-  background: rgba(15, 23, 42, 0.35);
+  margin-bottom: 12px;
+  background: #fff;
   transition:
     border-color 180ms ease,
-    background-color 180ms ease;
+    box-shadow 180ms ease;
 }
 
 .input:hover {
-  border-color: rgba(255, 255, 255, 0.45);
+  border-color: rgba(31, 111, 235, 0.5);
 }
 
 .input:focus-visible {
   outline: none;
-  border-color: rgba(255, 255, 255, 0.7);
-  background: rgba(15, 23, 42, 0.5);
+  border-color: rgba(15, 139, 141, 0.7);
+  box-shadow: 0 0 0 4px rgba(15, 139, 141, 0.18);
 }
 
 .button {
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 10px;
-  padding: 8px 14px;
+  border: none;
+  border-radius: 11px;
+  padding: 8px 12px;
   color: #fff;
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.02em;
   cursor: pointer;
-  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 18px rgba(41, 65, 104, 0.2);
   transition:
-    border-color 180ms ease,
-    background-position 180ms ease,
+    transform 160ms ease,
+    box-shadow 160ms ease,
     filter 180ms ease;
 }
 
 .button:hover {
-  border: 1px solid rgba(255, 255, 255, 0.55);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(41, 65, 104, 0.25);
+  filter: saturate(1.08);
 }
 
 .buttonDone {
-  background: linear-gradient(135deg, #1fa66faa 0%, #34d399aa 100%);
+  background: linear-gradient(135deg, #1b8f5a 0%, #2fb070 100%);
 }
 
 .buttonEdit {
-  background: linear-gradient(135deg, #3262f0aa 0%, #38bdf8aa 100%);
+  background: linear-gradient(135deg, #1f6feb 0%, #0f8b8d 100%);
 }
 
 .buttonDelete {
-  background: linear-gradient(135deg, #d94848aa 0%, #f97316aa 100%);
+  background: linear-gradient(135deg, #cc3342 0%, #eb5c44 100%);
 }
 
 .buttonCancel {
-  background: linear-gradient(135deg, #5b6274aa 0%, #8f99abaa 100%);
-}
-
-.buttonDone:hover {
-  background: linear-gradient(135deg, #1fa66f 0%, #34d399 100%);
-}
-
-.buttonEdit:hover {
-  background: linear-gradient(135deg, #3262f0 0%, #38bdf8 100%);
-}
-
-.buttonDelete:hover {
-  background: linear-gradient(135deg, #d94848 0%, #f97316 100%);
-}
-
-.buttonCancel:hover {
-  background: linear-gradient(135deg, #5b6274 0%, #8f99ab 100%);
+  background: linear-gradient(135deg, #5d6677 0%, #7d889b 100%);
 }
 
 .button:focus-visible {
-  outline: 2px solid rgba(255, 255, 255, 0.9);
-  outline-offset: 2px;
+  outline: 3px solid rgba(15, 139, 141, 0.35);
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  .taskContainer {
+    padding: 14px;
+  }
+
+  .actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .button {
+    width: 100%;
+  }
 }
