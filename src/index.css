@@ -1,15 +1,50 @@
-body {
-  background: radial-gradient(ellipse at 20% 20%, #35234b 0%, transparent 70%),
-    radial-gradient(ellipse at 60% 20%, #2975bf 0%, transparent 70%),
-    radial-gradient(ellipse at 100% 20%, #3d54b1 0%, transparent 70%),
-    radial-gradient(ellipse at 100% 100%, #9f3c54 0%, transparent 70%),
-    radial-gradient(ellipse at 20% 100%, #362d6f 0%, transparent 70%);
-  background-blend-mode: screen;
+:root {
+  --bg-surface: #f9fbfd;
+  --bg-card: rgba(255, 255, 255, 0.82);
+  --bg-card-strong: rgba(255, 255, 255, 0.92);
+  --text-primary: #162033;
+  --text-secondary: #4f5d77;
+  --border-soft: rgba(74, 105, 158, 0.2);
+  --accent: #0f8b8d;
+  --accent-strong: #1f6feb;
+  --danger: #d73a49;
+  --success: #1b8f5a;
+  --shadow-soft: 0 18px 45px rgba(42, 58, 88, 0.18);
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
+  margin: 0;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  color: var(--text-primary);
+  background:
+    radial-gradient(
+      circle at 12% 14%,
+      rgba(206, 57, 77, 0.26),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 88% 20%,
+      rgba(48, 102, 190, 0.28),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 78% 82%,
+      rgba(20, 156, 148, 0.2),
+      transparent 40%
+    ),
+    linear-gradient(145deg, #131925 0%, #1b2333 42%, #222635 100%);
+  background-attachment: fixed;
+}
+
+#root {
+  width: min(840px, 100%);
+  padding: 28px 18px;
 }

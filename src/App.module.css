@@ -1,68 +1,108 @@
 .container {
-  width: 600px;
-  border-radius: 3%;
-  background-color: rgba(0, 0, 0, 0.4);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-  padding: 30px;
+  width: 100%;
+  border-radius: 28px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(12px);
+  padding: 32px;
+  animation: reveal 450ms ease-out;
 }
 
 .title {
-  margin-top: 0px;
-  color: #fff;
+  margin: 0;
+  color: var(--text-primary);
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  letter-spacing: -0.02em;
 }
 
 .subtitle {
-  color: #fff;
+  margin: 8px 0 24px;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .button {
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  margin-bottom: 12px;
-  border-radius: 10px;
-  padding: 10px 16px;
+  border: none;
+  margin-bottom: 18px;
+  border-radius: 14px;
+  padding: 12px 18px;
   color: #fff;
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   font-weight: 600;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.015em;
   cursor: pointer;
-  background: linear-gradient(135deg, #2563ebaa 0%, #0ea5e9aa 100%);
+  background: linear-gradient(
+    135deg,
+    var(--accent-strong) 0%,
+    var(--accent) 100%
+  );
+  box-shadow: 0 10px 24px rgba(29, 111, 192, 0.35);
   transition:
-    border-color 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease,
     filter 180ms ease;
 }
 
 .button:hover {
-  border: 1px solid rgba(255, 255, 255, 0.55);
-  background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(29, 111, 192, 0.42);
+  filter: saturate(1.1);
 }
 
 .button:focus-visible {
-  outline: 2px solid rgba(255, 255, 255, 0.9);
-  outline-offset: 2px;
+  outline: 3px solid rgba(15, 139, 141, 0.35);
+  outline-offset: 3px;
 }
 
 .footer {
   margin: 0 auto;
-  padding-top: 20px;
-  color: white;
+  padding-top: 16px;
+  color: #d4deef;
   text-align: center;
+  font-size: 0.9rem;
 }
 
 .footerLink {
-  color: #fff;
+  color: #79b6ff;
   text-decoration: underline;
-  text-decoration-color: #fff;
+  text-decoration-color: rgba(121, 182, 255, 0.45);
   transition:
     color 160ms ease,
     text-decoration-color 160ms ease;
 }
 
 .footerLink:hover {
-  color: rgba(255, 255, 255, 0.82);
-  text-decoration-color: rgba(255, 255, 255, 0.82);
+  color: #8ce6dc;
+  text-decoration-color: rgba(140, 230, 220, 0.7);
 }
 
 .footerLink:focus-visible {
-  outline: 2px solid rgba(255, 255, 255, 0.9);
+  outline: 3px solid rgba(15, 139, 141, 0.35);
   outline-offset: 2px;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    border-radius: 22px;
+    padding: 22px 18px;
+  }
+
+  .button {
+    width: 100%;
+    justify-content: center;
+  }
 }

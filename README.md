@@ -1,20 +1,20 @@
-# React TODO List
+# Task killer
 
-Aplikacja do zarzadzania zadaniami (TODO List) napisana w React + Vite. Umozliwia dodawanie, edycje, usuwanie i oznaczanie zadan jako wykonane, a stan listy jest zarzadzany przez Zustand.
+Task killer to aplikacja do zarządzania zadaniami (TODO List) napisana w React + Vite. Umożliwia dodawanie, edycję, usuwanie i oznaczanie zadań jako wykonane, a stan listy jest zarządzany przez Zustand.
 
 ## Demo
 
-- GitHub Pages: [https://brzozanet.github.io/react-todo-list/](https://brzozanet.github.io/react-todo-list/)
+- GitHub Pages: [https://brzozanet.github.io/task-killer/](https://brzozanet.github.io/task-killer/)
 
-## Funkcjonalnosci
+## Funkcjonalności
 
-- Dodawanie nowych zadan
-- Edycja istniejacych zadan
-- Usuwanie zadan z potwierdzeniem
+- Dodawanie nowych zadań
+- Edycja istniejących zadań
+- Usuwanie zadań z potwierdzeniem
 - Oznaczanie zadania jako zrobione (z potwierdzeniem)
-- Walidacja formularza: blokada pustych i duplikujacych sie zadan
+- Walidacja formularza: blokada pustych i duplikujących się zadań
 - Powiadomienia o akcjach (Notiflix)
-- Licznik zadan widoczny w naglowku
+- Licznik zadań widoczny w nagłówku
 
 ## Technologie
 
@@ -31,7 +31,7 @@ Aplikacja do zarzadzania zadaniami (TODO List) napisana w React + Vite. Umozliwi
 ## Struktura projektu
 
 ```text
-react-todo-list/
+task-killer/
 |- public/
 |- src/
 |  |- components/
@@ -61,25 +61,25 @@ react-todo-list/
 ## Instalacja i uruchomienie
 
 ```bash
-git clone https://github.com/brzozanet/react-todo-list.git
-cd react-todo-list
+git clone https://github.com/brzozanet/task-killer.git
+cd task-killer
 npm install
 npm run dev
 ```
 
-Aplikacja developerska bedzie dostepna pod adresem `http://localhost:5173`.
+Aplikacja developerska będzie dostępna pod adresem `http://localhost:5173/task-killer/`.
 
 ## Skrypty npm
 
 - `npm run dev` - uruchamia Vite w trybie developerskim
-- `npm run build` - buduje aplikacje do katalogu `dist`
-- `npm run preview` - lokalny podglad buildu produkcyjnego
+- `npm run build` - buduje aplikację do katalogu `dist`
+- `npm run preview` - lokalny podgląd buildu produkcyjnego
 - `npm run lint` - uruchamia ESLint
 - `npm run deploy` - build + publikacja `dist` na GitHub Pages
 
 ## Uwagi
 
-- Aplikacja startuje z przykladowa lista zadan zdefiniowana w `src/store/store.js`.
-- Dane sa trzymane w pamieci aplikacji (brak zapisu do localStorage lub backendu), wiec po odswiezeniu strony wracaja dane poczatkowe.
+- Aplikacja startuje z przykładową listą zadań zdefiniowaną w `src/store/store.js`.
+- Dane są trzymane w pamięci aplikacji (brak zapisu do localStorage lub backendu), więc po odświeżeniu strony wracają dane początkowe.
 
-![Screenshot App](https://raw.githubusercontent.com/brzozanet/react-todo-list/refs/heads/main/src/images/gh-cover-react-todo-list.jpg)
+![Screenshot App](https://raw.githubusercontent.com/brzozanet/task-killer/refs/heads/main/src/images/gh-cover-task-killer.jpg)
