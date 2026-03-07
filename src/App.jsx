@@ -34,7 +34,7 @@ function App() {
           <AddTaskForm todos={todos} />
         ) : (
           <button className={css.button} onClick={handleIsFormVisibleClick}>
-            Dodaj zadaniee
+            Dodaj zadanie
           </button>
         )}
         <TodoList todos={todos} />
