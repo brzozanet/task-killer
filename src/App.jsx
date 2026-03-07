@@ -26,7 +26,7 @@ function App() {
   return (
     <>
       <div className={css.container}>
-        <h1 className={css.title}>Task Killer 😎</h1>
+        <h1 className={css.title}>Task Killer – No Task Left Alive 😎</h1>
         <h2 className={css.subtitle}>
           {todos.length} {numberOfTodosText}
         </h2>
