@@ -1,4 +1,4 @@
-# Task Killer – No Task Left Alive
+# 😎 Task Killer – No Task Left Alive
 
 ![Screenshot App](https://raw.githubusercontent.com/brzozanet/task-killer/refs/heads/main/src/images/gh-cover-task-killer.jpg)
 
